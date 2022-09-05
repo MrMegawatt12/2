@@ -64,7 +64,7 @@ const UPGS = {
                 },
                 effDesc: x => "+"+format(x,0),
             },{
-                max: 250,
+                max: 25000,
 
                 title: "Grow Speed",
                 desc: `Increase grass grow speed by <b class="green">10%</b> per level.`,
