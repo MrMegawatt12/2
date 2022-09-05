@@ -36,8 +36,8 @@ const UPGS = {
                 res: "grass",
                 icon: ['Curr/Grass'],
                 
-                cost: i => Decimal.pow(1,i).mul(10).ceil(),
-                bulk: i => i.div(10).max(1).log(1).floor().toNumber()+1,
+                cost: i => Decimal.pow(1.01,i).mul(10).ceil(),
+                bulk: i => i.div(10).max(1).log(1.01).floor().toNumber()+1,
 
                 effect(i) {
                     let x = Decimal.pow(2,Math.floor(i/25)).mul(i+100000000000000000000000000000000000000000000000)
@@ -46,7 +46,7 @@ const UPGS = {
                 },
                 effDesc: x => x.format()+"x",
             },{
-                max: 1000,
+                max: 1000000,
 
                 title: "More Grass",
                 desc: `Increase grass cap by <b class="green">1</b> per level.`,
