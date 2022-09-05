@@ -64,7 +64,7 @@ const UPGS = {
                 },
                 effDesc: x => "+"+format(x,0),
             },{
-                max: 25000,
+                max: 250000000000000000000000000000000,
 
                 title: "Grow Speed",
                 desc: `Increase grass grow speed by <b class="green">10%</b> per level.`,
@@ -94,7 +94,7 @@ const UPGS = {
                 bulk: i => i.div(1e3).max(1).log(1.3).floor().toNumber()+1,
 
                 effect(i) {
-                    let x = Decimal.pow(2,Math.floor(i/25)).mul(i+1000000000000000000000)
+                    let x = Decimal.pow(2,Math.floor(i/25)).mul(i+1)
 
                     return x
                 },
