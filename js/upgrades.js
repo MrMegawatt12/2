@@ -64,7 +64,7 @@ const UPGS = {
                 },
                 effDesc: x => "+"+format(x,0),
             },{
-                max: 250000000000000000000000000000000,
+                max: 1000000,
 
                 title: "Grow Speed",
                 desc: `Increase grass grow speed by <b class="green">10%</b> per level.`,
@@ -474,7 +474,7 @@ const UPGS = {
                 cost: i => E(1e15),
                 bulk: i => 1,
             },{
-                unl: _=>player.grasshop>=4,
+                unl: _=>player.pTimes>=1,
 
                 max: 10,
 
@@ -493,7 +493,7 @@ const UPGS = {
                 },
                 effDesc: x => "+"+formatPercent(x,0)+"/s",
             },{
-                unl: _=>player.grasshop>=4,
+                unl: _=>player.pTimes>=1,
 
                 max: 10,
 
@@ -512,7 +512,7 @@ const UPGS = {
                 },
                 effDesc: x => "+"+formatPercent(x,0)+"/s",
             },{
-                unl: _=>player.grasshop>=6,
+                unl: _=>player.pTimes>=1,
 
                 title: "Perk Autobuy",
                 desc: `You can now automatically buy Perk Upgrades.`,
